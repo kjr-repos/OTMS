@@ -1,0 +1,219 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+
+<html>
+<head>
+
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <form runat="server">
+        <!-- Begin Wrapper -->
+        <div id="wrapper">
+
+            <!-- Begin Header -->
+
+            <div id="header">
+
+                <div class="logo">
+                    <h1 id="lineone">Online Tender Management System </h1>
+                    <h2 id="linetwo">it makes u easy bussiness</h2>
+                </div>
+
+
+            </div>
+            <!-- End Header -->
+
+
+            <!-- Begin Navigation -->
+            <div id="navigation">
+
+                <%-- <div class="menu">
+                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Height="37px"
+                        Orientation="Horizontal" Width="761px"
+                        OnMenuItemClick="Menu1_MenuItemClick" ForeColor="Black">
+                        <DynamicMenuItemStyle BackColor="#0099FF" />
+                        <Items>
+                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                            <asp:MenuItem Text="Home" Value="Home"
+                                NavigateUrl="~/Admin/frmWelcomeAdmin.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Add" Value="Add">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddCountry.aspx" Text="Add Country"
+                                    Value="Add Country"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddState.aspx" Text="Add State"
+                                    Value="Add State"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddDept.aspx" Text="Add Dept"
+                                    Value="Add Dept"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddItems.aspx" Text="Add Item"
+                                    Value="Add Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddEmployee.aspx" Text="Add Employee"
+                                    Value="Add Employee"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddIssuer.aspx" Text="Add Issuer"
+                                    Value="Add Issuer"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Manage" Value="Manage">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmManageCountry.aspx" Text="Manage Country"
+                                    Value="Manage Country"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmManageState.aspx" Text="Manage State"
+                                    Value="Manage State"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmDeleteIssuer.aspx" Text="Delete Issuer"
+                                    Value="Delete Issuer"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmDeleteEmployee.aspx" Text="Delete Emp"
+                                    Value="Delete Emp"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Tenders" Value="ShowTenders">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAnnounceResult.aspx"
+                                    Text="Announce Result" Value="Announce Result"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Mannage Supplier" Value="Aprove Supplier">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmApproveSupplier.aspx"
+                                    Text="Approve Supplier" Value="Approve Supplier"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmManageSupplier.aspx"
+                                    Text="Delete Supplier" Value="Delete Supplier"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Reports" Value="Reports">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmTenderWinners.aspx"
+                                    Text="Show TenderWinners" Value="Show TenderWinners"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout"></asp:MenuItem>
+                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                        </Items>
+
+                    </asp:Menu>
+
+
+
+
+                    <%--
+	        <ul>
+			<li><a href="frmWelcomeAdmin.aspx" title="#"> Home</a></li>
+			<li><a href="frmAddCountry.aspx" title="#">Add Country</a></li>
+			<li><a href="frmAddDept.aspx" title="#">Add Dept</a></li>
+
+                        <li><a href="frmAddEmployee.aspx" title="#">Add Emp</a></li>
+                        <li><a href="frmAddItems.aspx" title="#">AddItems</a></li>
+                        <li><a href="frmAddState.aspx" title="#">Add State</a></li>
+                        <li><a href="frmApproveSupplier.aspx" title="#">Approve Supplier</a></li>
+                        <li><a href="#" title="#"></a>
+                            </li>
+                        
+                        
+		</ul>
+                </div>--%>
+
+
+                <div class="navbar1">
+                    <a href="./frmWelcomeAdmin.aspx">Home</a>
+                    <div class="subnav1">
+                        <button class="subnavbtn1">Add <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content1">
+                            <a href="./frmAddCountry.aspx">Add Country</a>
+                            <a href="./frmAddState.aspx">Add State</a>
+                            <a href="./frmAddDept.aspx">Add Department</a>
+                            <a href="./frmAddItems.aspx">Add Item</a>
+                            <a href="./frmAddEmployee.aspx">Add Employee</a>
+                            <a href="./frmAddIssuer.aspx">Add Department</a>
+                        </div>
+                    </div>
+                    <div class="subnav1">
+                        <button class="subnavbtn1">Manage <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content1">
+                            <a href="./frmManageCountry.aspx">Manage Country</a>
+                            <a href="./frmManageState.aspx">Manage State</a>
+                            <a href="./frmDeleteIssuer.aspx">Delete Issuer</a>
+                            <a href="./frmDeleteEmployee.aspx">Delete Emp</a>
+                        </div>
+                    </div>
+                    <div class="subnav1">
+                        <button class="subnavbtn1">Tenders <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content1">
+                            <a href="./frmAnnounceResult.aspx">Announce Result</a>
+
+                        </div>
+                    </div>
+
+                    <div class="subnav1">
+                        <button class="subnavbtn1">Reports <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content1">
+                            <a href="./frmTenderWinners.aspx">Show TenderWinners</a>
+
+                        </div>
+                    </div>
+                    <a onserverclick="Logout_Click" runat="server" href="#">Logout</a>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+            <!-- End Navigation -->
+
+            <!-- Begin Left Column -->
+            <%-- <div id="leftcolumn">
+
+		 
+			<div id="leftbox">
+                        
+                        <div class="col-l">
+	        <ul>
+			<li><a href="http://www.businesswebsitetemplates.blogspot.com" title="free business templates"> Business Templates</a></li>
+			<li><a href="http://moneyearnersonline.blogspot.com" title="earn money online">Make Money Online</a></li>
+			<li><a href="#" title="#">Lorem Ipsum Dolor</a></li>
+                        <li><a href="#" title="#">More Links</a></li>
+
+                        <li><a href="#" title="#">Link Five</a></li>
+		</ul>
+                        </div>
+                        </div>
+                        <div id="leftboxbottom"></div>
+            
+                             <br/>
+
+			<div id="leftbox-2">
+                        
+                        <div class="col-l">
+
+	                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec rutrum neque eu nisl. Morbi eget felis. Vestibulum feugiat lectus ut magna. Ut interdum <a href="#">ipsum nec metus</a>. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget augue .</p>
+                        </div>
+                        </div>
+                        <div id="leftboxbottom-2"></div>
+		 
+		 </div>--%>
+            <!-- End Left Column -->
+
+            <!-- Begin Right Column -->
+
+            <div id="rightcolumnadmin">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <!-- End Right Column -->
+
+            <!-- Begin Footer -->
+            <div id="footer">
+                <p id="legal">CopyRightsReserved</p>
+
+                <%--<p id="legal">Copyright &copy; 2007  by Free CSS Templates  Designed by <a href="http://www.businesswebsitetemplates.blogspot.com">FEEE CSS TEMPLATES</a>.</p>--%>
+            </div>
+            <!-- End Footer -->
+
+        </div>
+
+        <!-- End Wrapper -->
+    </form>
+</body>
+</html>
+
